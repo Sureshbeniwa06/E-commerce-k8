@@ -24,7 +24,7 @@ E-commerce-k8/
      docker push Suresh202/E-commerce-k8:v1
 
 
-### 2. Kubernetes Deployment
+###  Kubernetes Deployment
 
      kubectl apply -f k8s/deployment.yaml
      kubectl apply -f k8s/service.yaml
