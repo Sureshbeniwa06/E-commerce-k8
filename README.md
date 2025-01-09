@@ -30,6 +30,33 @@ E-commerce-k8/
      kubectl apply -f k8s/service.yaml
      kubectl apply -f k8s/ingress.yaml
 
+### sudo nano ingress.yaml
+
+     apiVersion: networking.k8s.io/v1
+     kind: Ingress
+     metadata:
+          name: ecommerce-ingress
+     annotations:
+         kubernetes.io/ingress.class: nginx
+         nginx.ingress.kubernetes.io/rewrite-target: /
+     spec:
+       rules:
+       - host: "e-commerce.chickenkiller.com"
+       http:
+       paths:
+      - pathType: Prefix
+        path: "/"
+        backend:
+          service:
+            name: ecommerce-service 
+            port:
+              number: 80
+
+
+
+
+     
+
 
 
 ## Features
