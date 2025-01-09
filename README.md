@@ -41,14 +41,14 @@ E-commerce-k8/
          nginx.ingress.kubernetes.io/rewrite-target: /
      spec:
        rules:
-       - host: "e-commerce.chickenkiller.com"
+       - host: "e-commerce.chickenkiller.com"                       --------ip of minikube (check with minikube ip) point to dns (on website free dns write on web browser)
        http:
        paths:
       - pathType: Prefix
-        path: "/"
+        path: "/"                                               --------------- this is root path of website like:index.html
         backend:
           service:
-            name: ecommerce-service 
+            name: ecommerce-service                              ---------check service (minikube service list) & name of service put here
             port:
               number: 80
 
