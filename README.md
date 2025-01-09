@@ -64,12 +64,15 @@ E-commerce-k8/
 - 3 Replica Pods
 - LoadBalancer Service
 - Resource-managed Containers
+- ingrees-nginx contoller for external service like http/https
 
 ## Monitoring
 
      kubectl get deployments
      kubectl get pods
      kubectl get services
+     kubectl get ingress
+     kubectl get ingress --watch
 
      
 ## Scaling
